@@ -50,4 +50,6 @@ whatweb zero.webappsecurity.com
 
 Result from whatweb:
 
-![whatweb result](SCREENSHOTS/)
+![whatweb result](SCREENSHOTS/whatweb.png)
+
+
