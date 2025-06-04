@@ -31,3 +31,23 @@ Breakdown of the command:
 Result from gobuster:
 
 ![gobuster result](SCREENSHOTS/gobuster_scan_result.png)
+
+
+From the above result, we can see that the gobuster has identified some important directories such as /admin, /cgi-bin, /docs, /manager etc. 
+This enumeration process has basically increased the attack surface, by discovering these hidden directories. Attacker can look into these directories to identify vulnerabilities and ways to expolit them.
+
+---
+
+## Fingerprinting
+
+Use of fingerprinting is to findout the underlying technology that the web application is used to be built.
+
+For this purpose we can use tools like whatweb.
+
+```bash
+whatweb zero.webappsecurity.com
+```
+
+Result from whatweb:
+
+![whatweb result](SCREENSHOTS/)
