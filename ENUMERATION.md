@@ -29,3 +29,5 @@ Breakdown of the command:
 - ***-w***        &nbsp;&nbsp;&nbsp;&nbsp;      Path to the wordlist.
 
 Result from gobuster:
+
+![gobuster result](SCREENSHOTS/gobuster_scan_result.png)
