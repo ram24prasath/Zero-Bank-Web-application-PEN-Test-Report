@@ -12,7 +12,7 @@ Common Techniques used for Reconnaissance for web application:
 
 ---
 
-## Directory and File enumeration
+## Directory and File enumeration 📂
 
 Technique to identifying and listing the hidden directories and files on the server. Directory Enumeration can be performed by using dirb, dirbuster, gobuster and dirsearch.
 
@@ -38,7 +38,7 @@ This enumeration process has basically increased the attack surface, by discover
 
 ---
 
-## Fingerprinting
+## Fingerprinting 🖐️
 
 Use of fingerprinting is to findout the underlying technology that the web application is used to be built.
 
@@ -53,3 +53,21 @@ Result from whatweb:
 ![whatweb result](SCREENSHOTS/whatweb.png)
 
 
+Breakdown of fingerprinting result ⏬:
+
+whatweb has returned `[200 ok]` response which indicates that the site is up and responsive. It also has retrived some information about the website which can be useful during exploitation phase.
+
+Technologies Identified 🔍 :
+
+| Category                 | Value                                            | Description                                                               |
+| ------------------------ | ------------------------------------------------ | ------------------------------------------------------------------------- |
+| **Web Server**           | `Apache-Coyote/1.1`                              | Apache Coyote is a connector component used in **Apache Tomcat** servers. |
+| **Frontend Framework**   | `Bootstrap`                                      | Popular CSS framework, likely used for UI.                                |
+| **JavaScript Library**   | `jQuery 1.8.2`                                   | Outdated version (v1.8.2); could be vulnerable.                           |
+| **HTML Version**         | `HTML5`                                          | Indicates the use of modern HTML.                                         |
+| **Content Language**     | `en-US`                                          | The page is in English (US).                                              |
+| **Country**              | `United States [US]`                             | Geolocation of the IP address.                                            |
+| **Title**                | `Zero - Personal Banking - Loans - Credit Cards` | Page title, often helpful in identifying web apps.                        |
+| **IP Address**           | `54.82.22.214`                                   | Public IP address of the web server.                                      |
+| **Uncommon Header**      | `access-control-allow-origin`                    | CORS-related; might need review for misconfigurations.                    |
+| **Compatibility Header** | `X-UA-Compatible: IE=Edge`                       | Suggests compatibility mode for IE; usually legacy support.               |
