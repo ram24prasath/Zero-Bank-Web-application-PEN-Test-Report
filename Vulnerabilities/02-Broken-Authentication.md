@@ -1,4 +1,4 @@
-# Broken Authentication
+# Broken Authentication ⛓️
 
 Broken authentication refers to vulnerabilities within an application's authentication mechanism that allows attackers to impersonate legitimate users
 or byapss security controls.
