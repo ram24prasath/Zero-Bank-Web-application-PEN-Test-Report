@@ -21,3 +21,6 @@ information that could be useful to exploit further.
 
 Similarly we can explore `/manager` path and try to extract hidden information that an attacker could you to exploit the application.
 
+![Manager_access](/SCREENSHOTS/Broken_Auth_manager.png)
+
+Here, Evem though we get error response, we can see that we have forced the application to display sensitve informations such as username and password that are only accessible to certain users. Atatcker could leverage this compromised data and gain full access to the application.
