@@ -26,3 +26,22 @@ Previously using enumeration techniques, we found the hidden `/admin` page, plea
 
 After visting the admin page, navigate to the currencies section and here you find the 'add currency' section. Upon clicking that you will be presented a input form.
 
+I have found that the input field `country` is suseptible to xss type of vulnerability, crafted a payload to store a malicious script in the database.
+
+```bash
+<svg onload=alert("Hacked")>
+```
+
+![XSS_payload](/SCREENSHOTS/XSS1.png)
+
+What this script does is whenever a user visits the `/admin/currencies` page, this script will executed and create a pop-up alert. 
+
+![XSS_alert](/SCREENSHOTS/xss2.png)
+
+
+Although this maybe seem harmless from a user's perpective, this script is just to showcase the presence of this type vulnerability. Attacker can craft payloads to steal sensitive information that the application is retreiving from the database to the user's browser. This information can be stolen in the form of cookies, sessions etc.
+
+This type of xss is stored permanently in the database and whenever a user is visting the page, the atatcker's script will be executed in the background.
+
+![XSS_DB](/SCREENSHOTS/xss3.png)
+
