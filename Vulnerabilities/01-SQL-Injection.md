@@ -1,4 +1,4 @@
-# SQL Injection
+# SQL Injection 💉
 
 SQL Injection is type of vulnerability which involves an attacker exploting an SQL query used in an application which is used retrieve information from the webserver, if the SQL statements are improperly used, atatckers can exploit by retrieving sensitive unauthorized data or modify data in the webserver.
 
