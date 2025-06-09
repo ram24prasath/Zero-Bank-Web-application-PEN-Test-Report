@@ -1,0 +1,28 @@
+# Cross Site Scripting (XSS)
+
+XSS is a type of attack where attacker injects malicious scripts into the web application via user input fields.
+
+Attacker can send the malicious code to the user's browser and it will get executed without much checks because the as far the user is concerned the
+code came from the trusted web application.
+
+This malicious script can steal user's data, session, cookies or other sensitive information retained by the browser from the site.
+
+XSS atatcks can be categorised into 3 categories.
+- Reflected XSS
+- Stored XSS
+- DOM-based XSS
+
+1. Reflected XSS are those where injected scripts are reflected off the web server, such as in error message, search result, or any other response.
+2. Store XSS, attack where injected malicious script is permanently stored on the web server, such as in database, message forum, comment fields.
+   When the information stored is retrieved from the database bu the user, the script is executed in the user's browser.
+3. Blind XSS:  It generally occurs when the attacker’s payload saved on the server and reflected back to the victim from the backend application.
+   For example in feedback forms, an attacker can submit the malicious payload using the form, and once the backend user/admin of the application will open the attacker’s submitted form via the backend application,
+   the attacker’s payload will get executed.
+
+## Exploiting Stored XSS on Zero Bank Application
+
+The stored xss vulnerability if found in a input form in the path /admin of the web application. 
+Previously using enumeration techniques, we found the hidden `/admin` page, please refer 02-Broken-authentication.md file for more details.
+
+After visting the admin page, navigate to the currencies section and here you find the 'add currency' section. Upon clicking that you will be presented a input form.
+
