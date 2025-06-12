@@ -45,3 +45,20 @@ This type of xss is stored permanently in the database and whenever a user is vi
 
 ![XSS_DB](/SCREENSHOTS/xss3.png)
 
+## Exploiting Reflected XSS on Zero Bank Application
+
+Reflected attacks are those where the injected script is reflected off the web server, such as in an error message, search result, or any other response that includes some or all of the input sent to the server as part of the request.
+
+I found one of the input form in the page `/add-new-payee` vulnerable to reflected xss using the simple crafted input. 
+
+```bash
+<script>alert(1)</script>
+```
+
+This is one of most basic script commonly injected into input forms to check if the form is vulnerable to cross site scripting.
+
+![reflected_XSS1](/SCREENSHOTS/reflected_xss1.png)
+
+The field payee description is the recipient of the payload. We can see the alert pop-up immediately once we submit the input form.
+
+![reflected_XSS2](/SCREENSHOTS/reflected_xss2.png)
