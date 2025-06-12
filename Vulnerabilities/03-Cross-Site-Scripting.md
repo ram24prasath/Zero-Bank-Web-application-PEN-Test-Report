@@ -57,8 +57,8 @@ I found one of the input form in the page `/add-new-payee` vulnerable to reflect
 
 This is one of most basic script commonly injected into input forms to check if the form is vulnerable to cross site scripting.
 
-![reflected_XSS1](/SCREENSHOTS/reflected_xss1.png)
+![reflected_XSS1](/SCREENSHOTS/Reflected_XSS1.png)
 
 The field payee description is the recipient of the payload. We can see the alert pop-up immediately once we submit the input form.
 
-![reflected_XSS2](/SCREENSHOTS/reflected_xss2.png)
+![reflected_XSS2](/SCREENSHOTS/Reflected_XSS2.png)
