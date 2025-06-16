@@ -19,3 +19,5 @@ We can see that by changing `accountId=2`, attacker is able to retrieve account 
 ![IDOR3](/SCREENSHOTS/IDOR3.png)
 
 ---
+
+This is a critical vulnerability in the application, as it could lead to unauthorized disclosure of confidential information from the database.
